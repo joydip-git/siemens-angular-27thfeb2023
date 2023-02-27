@@ -3,4 +3,12 @@
 	b. outline styling
 		A. using <style> tag in the HTML file itself
 		B. using separate CSS file and linking the same with HTML file using <link> tag
+
+JS engine:
+	chrome - V8
+	firefox - spidermonkey
+	safari - JS Core
+
+Ryan Dahl
+	Node JS - V8
 				
