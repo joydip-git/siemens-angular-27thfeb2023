@@ -14,17 +14,24 @@
     <script src="./index.js">
 
     </script>
+    <link href="./index.css" rel="stylesheet">
+    <!-- <style>
+
+    </style> -->
 </head>
 
 <body>
-    <h1>Welome to Web App</h1>
+    <h1 id="hWelcome" class="center-style h1-font">Welome to Web App</h1>
+    <h1>Another Heading</h1>
     <br>
-    <button type="button" onclick="clicked()">
-        Click Me!!!
-    </button>
+    <div id="btnDiv" class="center-style">
+        <button class="btn-font" type="button" onclick="clicked()">
+            Click Me!!!
+        </button>
+    </div>
     <br>
-    <div>
-        <label for="checkChange">Check to Change Text: </label>
+    <div id="checkDiv" class="center-style">
+        <label for="checkChange" class="check-font">Check to Change Text: </label>
         <input type="checkbox" id="checkChange" onchange="onCheckChanged(event)">
     </div>
 </body>

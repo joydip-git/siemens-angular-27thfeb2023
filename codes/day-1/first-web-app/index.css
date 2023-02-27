@@ -1,0 +1,44 @@
+/* element selector */
+/* h1,
+        div,
+        button {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        } */
+
+/* id selctor */
+/* #hWelcome,
+        #btnDiv,
+        #checkDiv {
+            text-align: center;
+        }
+
+        #hWelcome {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #btnDiv {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #checkDiv {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        } */
+
+/* class selector */
+.center-style {
+  text-align: center;
+}
+
+.btn-font {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.check-font {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.h1-font {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}

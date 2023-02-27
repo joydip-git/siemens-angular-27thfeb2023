@@ -1,5 +1,6 @@
-https://github.com/joydip-git/siemens-angular-27thfeb2023
-
-angular-training
-			first-web-app
+1. Styles (CSS)
+	a. inline styling
+	b. outline styling
+		A. using <style> tag in the HTML file itself
+		B. using separate CSS file and linking the same with HTML file using <link> tag
 				
