@@ -1,0 +1,21 @@
+1. HTML, CSS and JS
+2. Node JS
+3. JS Execution 
+4. JS basics
+5. TypeScript
+6. New fetaures
+		class, constructor, super, extends keywords
+		let and const keywords
+		object destructuring
+		spread operator
+		rest operator
+		templated string
+		arrow function
+
+	const obj ={ prop1:value}
+	const {prop1:propValue} = obj
+	const copy = {...obj}
+
+	function test(...arr:any[]){}
+
+	const data = `${propValue}`
