@@ -43,6 +43,30 @@ event binding: passing data from view to code of the component
 <html-element (event)="method()">
 
 
+<form>
+	<input type='text' [(ngModel)]="first">
+	<button type='submit'>
+</form>
+
+directive:
+	used like an attribute of an element
+	a. attribute directive: they extend the behavior of the element
+	b. structurla directive: they decide the structure of the template
+	c. component directive: component
+
+@NgModule({
+	declarations:[NgModelDirective]
+})
+export class FormsModule{
+}
+
+@Directive({
+selector:['ngModel']
+})
+export class NgModelDirective{
+}
+
+
 
 
 

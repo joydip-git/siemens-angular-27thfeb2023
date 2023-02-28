@@ -1,0 +1,43 @@
+<div class="calc-style">
+    <fieldset class="fieldset">
+        <!-- <legend>Calculation Types:</legend> -->
+
+        <label for="radioAdd">Add:</label>
+        <input type="radio" id="radioAdd" name="calcradios" class="radio" (change)="setChoice(1)">
+
+        <label for="radioSubtract">Subtract:</label>
+        <input type="radio" id="radioSubtract" name="calcradios" (change)="setChoice(2)">
+
+        <label for="radioMultiply">Multiply:</label>
+        <input type="radio" id="radioMultiply" name="calcradios" (change)="setChoice(3)">
+
+        <label for="radioDivide">Divide:</label>
+        <input type="radio" id="radioDivide" name="calcradios" (change)="setChoice(4)">
+    </fieldset>
+    <br>
+    <form ngForm (submit)="calculate()">
+        <div class="input-div">
+            <label for="txtFirst" class="label">First:</label>
+            <!-- <input type="text" id="txtFirst" class="text-box" [value]="first" (keyup)="setFirst(firstTxt.value)"
+                #firstTxt> -->
+            <input type="text" id="txtFirst" class="text-box" [(ngModel)]="first" #firstTxt name="firstNumber">
+        </div>
+        <div>
+            <label for="txtSecond" class="label">Second:</label>
+            <!-- <input type="text" id="txtSecond" class="text-box" value="{{second}}" (keyup)="setSecond(secondTxt.value)"
+                #secondTxt> -->
+            <input type="text" id="txtSecond" class="text-box" [(ngModel)]="second" #secondTxt name="secondNumber">
+        </div>
+        <br>
+        <div>
+            <button type="submit" class="btn">
+                Calculate
+            </button>
+        </div>
+    </form>
+    <br>
+    <div class="input-div">
+        <label for="txtResult" class="label">Result:</label>
+        <input type="text" id="txtResult" class="text-box" [value]="result" readonly>
+    </div>
+</div>
