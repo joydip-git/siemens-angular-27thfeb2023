@@ -40,6 +40,7 @@ a. interpolation: {{ prop-name }}
 b. property binding: <html-element [attribute]="prop-name">
 
 event binding: passing data from view to code of the component
+<html-element (event)="method()">
 
 
 
