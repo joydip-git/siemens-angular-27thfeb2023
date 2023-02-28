@@ -1,28 +1,33 @@
 <div class="calc-style">
-    <fieldset class="fieldset">
-        <!-- <legend>Calculation Types:</legend> -->
+    <form [formGroup]="calcForm" (submit)="calculate()">
+        <fieldset class="fieldset">
+            <!-- <legend>Calculation Types:</legend> -->
 
-        <label for="radioAdd">Add:</label>
-        <input type="radio" id="radioAdd" name="calcradios" class="radio" (change)="setChoice(1)">
+            <label for="radioAdd">Add:</label>
+            <input type="radio" id="radioAdd" name="add" class="radio" (change)="setChoice(1)" formControlName="add"
+                [checked]="choice===1?true:false">
 
-        <label for="radioSubtract">Subtract:</label>
-        <input type="radio" id="radioSubtract" name="calcradios" (change)="setChoice(2)">
+            <label for="radioSubtract">Subtract:</label>
+            <input type="radio" id="radioSubtract" name="subtract" (change)="setChoice(2)" formControlName="subtract"
+                [checked]="choice===2?true:false">
 
-        <label for="radioMultiply">Multiply:</label>
-        <input type="radio" id="radioMultiply" name="calcradios" (change)="setChoice(3)">
+            <label for="radioMultiply">Multiply:</label>
+            <input type="radio" id="radioMultiply" name="multiply" (change)="setChoice(3)" formControlName="multiply"
+                [checked]="choice===3?true:false">
 
-        <label for="radioDivide">Divide:</label>
-        <input type="radio" id="radioDivide" name="calcradios" (change)="setChoice(4)">
-    </fieldset>
-    <br>
-    <form>
+            <label for="radioDivide">Divide:</label>
+            <input type="radio" id="radioDivide" name="divide" (change)="setChoice(4)" formControlName="divide"
+                [checked]="choice===4?true:false">
+        </fieldset>
+        <br>
+
         <div class="input-div">
             <label for="txtFirst" class="label">First:</label>
-            <input type="text" id="txtFirst" class="text-box">
+            <input type="text" id="txtFirst" class="text-box" formControlName="first">
         </div>
         <div>
             <label for="txtSecond" class="label">Second:</label>
-            <input type="text" id="txtSecond" class="text-box">
+            <input type="text" id="txtSecond" class="text-box" formControlName="second">
         </div>
         <br>
         <div>

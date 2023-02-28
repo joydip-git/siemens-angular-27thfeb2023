@@ -66,6 +66,23 @@ selector:['ngModel']
 export class NgModelDirective{
 }
 
+Angular forms:
+	a. template driven forms
+			ngModel, ngForm directives from the component view (template)
+	b. ractive forms
+			a. create object of FormGroup which is a collection of FormControl objects
+			b. link the FormGroup object with <form> element and FormControl objects with individual <input> elements
+			use formGroup and formControlName directives inthe view (template)
+
+
+packages:
+ @angular/forms:
+		module class: FormsModule (import this)
+							assets: ngForm, ngModel, FormGroup, FormControl, FormBuilder etc.
+		module class: ReactiveFormsModule
+							assets: formGroup, formControlName, formGroupName, formControl directives
+
+
 
 
 
