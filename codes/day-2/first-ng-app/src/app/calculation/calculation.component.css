@@ -1,0 +1,29 @@
+.calc-style {
+  display: flex;
+  text-align: center;
+  margin: auto;
+  font-family: "Courier New", Courier, monospace;
+  align-items: center;
+  flex-direction: column;
+}
+.fieldset {
+  background-color: cadetblue;
+}
+.input-div {
+  vertical-align: text-top;
+}
+.text-box {
+  margin: 10px;
+}
+.label {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.btn {
+  background-color: cornflowerblue;
+  border: 1px solid cornflowerblue;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
