@@ -1,0 +1,10 @@
+<div style="background-color: bisque;" [style.width.px]="divWidth">
+  {{ title }}
+</div>
+<br>
+<div>
+  <label for="txtWidth">Enter Width:</label>
+  <input type="text" id="txtWidth" #width value="{{divWidth}}" readonly>
+  <button type="button" (click)="changeWidth(width.value)">Submit</button>
+</div>
+<!-- <app-another></app-another> -->

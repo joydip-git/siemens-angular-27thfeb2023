@@ -19,3 +19,37 @@
 	function test(...arr:any[]){}
 
 	const data = `${propValue}`
+
+global NPM package location:
+C:\Users\joydip\AppData\Roaming\npm
+
+
+
+Angular:
+@NgModule({
+	//for registering components, directives, pipes
+	declarations:[],
+	//for registering services
+	providers:[],
+	//for registering modules
+	imports:[]
+})
+
+data binding: passing data from code to view of the component
+a. interpolation: {{ prop-name }}
+b. property binding: <html-element [attribute]="prop-name">
+
+event binding: passing data from view to code of the component
+
+
+
+
+
+
+
+
+
+	
+
+
+
