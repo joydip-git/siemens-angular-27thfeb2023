@@ -1,7 +1,57 @@
+App structure:
+	app
+		app.component.html/css/ts
+		app.module.ts
+
+		products (feature module folder)
+			products.module.ts (module file)
+			components (folder)
+				product-list (folder)
+					product-list.component.html/css/ts
+				product-detail
+					product-detail.component.html/css/ts
+				add-product
+					add-product.component.html/css/ts
+				edit-product
+					edit-product.component.html/css/ts
+			pipes (folder)
+					filter-product.pipe.ts
+			services (folder)
+					product.service.ts
+			
+
+
+
 1. service and DI:
 	a. what is service?
 	b. how to create
-	c. decorator
+	c. decorator: @Injectable()
 	d. register service
+			i. only one asset (a component/module/pipe/directive/service): register at the asset level
+			ii. multiple assets of a feature module: register at the feature module level
+			iii. multiple assets of entire application: register at the root module level
 	e. consume service
+
+2. making HTTP requests
+		built-in service class: HttpClient
+		package: @angular/common/http
+		module: HttpClientModule
+
+3. rxjs: Observable, map, pipe
+
+4. component lifecycle
+		X			=> OnX			=> ngOnX
+		changes => OnChanges => ngOnChanges
+		init => OnInit => ngOnInit
+		destroy => OnDestroy => ngOnDestroy
 	
+{
+	"message":"records found",
+	"data":[{"productId":1,"productName":"Leaf Rake","productCode":"GDN-0011","releaseDate":"March 19, 2016","description":"Leaf rake with 48-inch wooden handle.","price":19.95,"starRating":2,"imageUrl":"http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"},{"productId":2,"productName":"Garden Cart","productCode":"GDN-0023","releaseDate":"March 18, 2019","description":"15 gallon capacity rolling garden cart","price":50,"starRating":4,"imageUrl":"http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"},{"productId":3,"productName":"Hammer","productCode":"TBX-0048","releaseDate":"May 21, 2016","description":"Curved claw steel hammer","price":8.9,"starRating":2,"imageUrl":"http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"},{"productId":4,"productName":"Saw","productCode":"TBX-0022","releaseDate":"May 15, 2016","description":"15-inch steel blade hand saw","price":11.55,"starRating":3.7,"imageUrl":"http://openclipart.org/image/300px/svg_to_png/27070/egore911_saw.png"},{"productId":5,"productName":"Video Game Controller","productCode":"GMG-0042","releaseDate":"October 15, 2015","description":"Standard two-button video game controller","price":67,"starRating":4,"imageUrl":"http://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"}]}
+
+
+
+{
+	"message":"record found",
+	"data":{"productId":1,"productName":"Leaf Rake","productCode":"GDN-0011","releaseDate":"March 19, 2016","description":"Leaf rake with 48-inch wooden handle.","price":19.95,"starRating":2,"imageUrl":"http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"}
+}
