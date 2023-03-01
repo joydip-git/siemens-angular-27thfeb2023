@@ -8,6 +8,23 @@ import { AddProductComponent } from './components/add-product/add-product.compon
 import { EditProductComponent } from './components/edit-product/edit-product.component';
 import { ProductService } from './services/product.service';
 import { FilterProductComponent } from './components/filter-product/filter-product.component';
+import { ProductFilterPipe } from './pipes/product-filter.pipe';
+import { Route, RouterModule, Routes } from '@angular/router';
+
+//type Routes = Route[]
+const productsRoutes: Routes = [{
+  path: 'products',
+  component: ProductListComponent
+}, {
+  path: 'products/add',
+  component: AddProductComponent
+}, {
+  path: 'products/view/:id',
+  component: ProductDetailComponent
+}, {
+  path: 'products/edit/:id',
+  component: EditProductComponent
+}]
 
 @NgModule({
   declarations: [
@@ -15,10 +32,13 @@ import { FilterProductComponent } from './components/filter-product/filter-produ
     ProductDetailComponent,
     AddProductComponent,
     EditProductComponent,
-    FilterProductComponent
+    FilterProductComponent,
+    ProductFilterPipe
   ],
   imports: [
-    CommonModule, HttpClientModule
+    CommonModule,
+    HttpClientModule,
+    RouterModule.forRoot(productsRoutes)
   ],
   providers: [ProductService],
   exports: [ProductListComponent]

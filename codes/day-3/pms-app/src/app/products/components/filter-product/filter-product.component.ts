@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter-product',
@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class FilterProductComponent {
 
+  @Input('filterData') filterValue = ''
+  @Output('filterDataChanged') filterValueChanged = new EventEmitter<string>()
+  submitFiterText(value: string) {
+    this.filterValueChanged.emit(value)
+  }
 }

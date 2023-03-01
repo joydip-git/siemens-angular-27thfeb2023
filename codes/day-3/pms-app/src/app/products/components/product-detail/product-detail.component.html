@@ -1,1 +1,22 @@
-<p>product-detail works!</p>
+<ng-template #loading>
+    <span>Loading...please wait</span>
+</ng-template>
+
+<ng-template #errorTemplate>
+    <span>{{errorMessage}}</span>
+</ng-template>
+
+<ng-template #norecord>
+    <span>No record found</span>
+</ng-template>
+
+<div class="container" *ngIf="loadingCompleted;else loading">
+    <div *ngIf="errorMessage==='';else errorTemplate">
+        <div *ngIf="product;else norecord">
+            <span>
+                {{product.productName}}
+            </span>
+        </div>
+
+    </div>
+</div>

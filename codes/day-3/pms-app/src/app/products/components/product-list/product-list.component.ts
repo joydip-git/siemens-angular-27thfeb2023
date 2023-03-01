@@ -14,6 +14,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
   products?: Product[];
   errorMessage = ''
   loadingCompleted = false
+  filterText = ''
 
   constructor(private svc: ProductService) {
   }
@@ -42,5 +43,9 @@ export class ProductListComponent implements OnInit, OnDestroy {
           this.loadingCompleted = true
         }
       })
+  }
+  updateFilterText(value: string) {
+    this.filterText = value
+    console.log(this.filterText)
   }
 }
