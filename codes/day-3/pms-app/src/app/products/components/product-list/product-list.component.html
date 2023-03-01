@@ -1,1 +1,46 @@
-<p></p>
+<ng-template #loading>
+    <span>Loading...please wait</span>
+</ng-template>
+
+<ng-template #errorTemplate>
+    <span>{{errorMessage}}</span>
+</ng-template>
+
+<ng-template #norecord>
+    <span>No records found</span>
+</ng-template>
+
+
+<div class="container" *ngIf="loadingCompleted;else loading">
+    <div *ngIf="errorMessage==='';else errorTemplate">
+        <app-filter-product>
+        </app-filter-product>
+        <br>
+        <table *ngIf="products;else norecord" class="table table-hover">
+            <thead class="thead-color">
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Rating</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody class="table-dark">
+                <tr *ngFor="let p of products">
+                    <td>
+                        <img [src]="p.imageUrl" alt="NA" [title]="p.productName" class="img">
+                    </td>
+                    <td>{{p.productName}}</td>
+                    <td>{{p.price}}</td>
+                    <td>{{p.starRating}}</td>
+                    <td>
+                        <button type="button" class="btn btn-danger">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

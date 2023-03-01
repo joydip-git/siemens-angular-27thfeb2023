@@ -7,13 +7,15 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { EditProductComponent } from './components/edit-product/edit-product.component';
 import { ProductService } from './services/product.service';
+import { FilterProductComponent } from './components/filter-product/filter-product.component';
 
 @NgModule({
   declarations: [
     ProductListComponent,
     ProductDetailComponent,
     AddProductComponent,
-    EditProductComponent
+    EditProductComponent,
+    FilterProductComponent
   ],
   imports: [
     CommonModule, HttpClientModule

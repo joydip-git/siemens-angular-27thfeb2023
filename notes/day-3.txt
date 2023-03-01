@@ -44,6 +44,15 @@ App structure:
 		changes => OnChanges => ngOnChanges
 		init => OnInit => ngOnInit
 		destroy => OnDestroy => ngOnDestroy
+
+5. directives:
+	a. compoment directive: @Component()
+	b. attribute directive: ngForm, ngModel, formGroup, formControlName, ngClass, ngStyle 
+	c. structual directive: used as an attribute, but decide the template will be displayed or not, what wil be the structure of the template etc. (manipulate the template) *ngIf, *ngIfElse, *ngFor, *ngSwitch etc.
+
+
+
+
 	
 {
 	"message":"records found",
